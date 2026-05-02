@@ -1,4 +1,3 @@
-# 22AIE111_CaseStudy_6   (GROUP -6)
 # Bank Management System
 
 # Team Members (with Roles)
