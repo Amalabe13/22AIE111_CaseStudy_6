@@ -2,8 +2,8 @@
 # Bank Management System
 
 # Team Members (with Roles)
-MEGHA-CLASS:
-AMALA-CLASS:
+*MEGHA-CLASS:
+*AMALA-CLASS:
 AISWARYA-CLASS:
 THEERTHA-CLASS:
 
