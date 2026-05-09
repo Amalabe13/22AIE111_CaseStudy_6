@@ -1,10 +1,10 @@
 # Bank Management System
 
 ## Team Members (with Roles)
-* MEGHA-CLASS:
-* AMALA-CLASS:
-* AISWARYA-CLASS:
-* THEERTHA-CLASS:
+* MEGHA:
+* AMALAS:
+* AISWARYA:
+* THEERTHA:
 
 ## Problem Description
 * The Bank Management System is designed to manage basic banking operations in a simple and organized way.
