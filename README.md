@@ -25,7 +25,8 @@ Open the project folder in:
 - VS Code
 - IntelliJ IDEA
 - Eclipse
-### Step 3: Compile the Java FilesOpen terminal inside the project folder and run:
+### Step 3: Compile the Java Files
+Open terminal inside the project folder and run:
 ```bash
 javac *.java
 ```
