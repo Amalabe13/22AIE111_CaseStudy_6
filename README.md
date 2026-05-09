@@ -20,7 +20,8 @@
 ```bash
 git clone https://github.com/Amalabe13/22AIE111_CaseStudy_6.git
 ```
-### Step 2: Open the ProjectOpen the project folder in:
+### Step 2: Open the Project
+Open the project folder in:
 - VS Code
 - IntelliJ IDEA
 - Eclipse
