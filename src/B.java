@@ -108,45 +108,132 @@ public class B {
         JPanel panel = centerPanel();
 
         addCentered(panel, new JButton("Balance"), e ->
-        JOptionPane.showMessageDialog(frame,
-        "Account Type: " + c.getAccount().getAccountType()
-        + "\nBalance: " + c.checkBalance()));
+            JOptionPane.showMessageDialog(frame,
+                "Account Type: " + c.getAccount().getAccountType()
+                + "\nBalance: " + c.checkBalance()));
+
+
 
         addCentered(panel, new JButton("Deposit"), e ->
-                inputBox("Deposit Amount", amt -> {
-                    if (c.deposit(amt)) {
-                    	Transaction t = new Transaction(amt,c.checkBalance(),"DEPOSIT",c.getCustomerId());
-                        t.processTransaction();
-                        JOptionPane.showMessageDialog(frame,t.generateReceipt());
-                    }
-                }, () -> customerMenu(c)));
+            inputBox("Deposit Amount", amt -> {
+
+                if (c.deposit(amt)) {
+
+                    Transaction t = new Transaction(
+                            amt,
+                            c.checkBalance(),
+                            "DEPOSIT",
+                            c.getCustomerId()
+                    );
+
+                    t.processTransaction();
+
+                    JOptionPane.showMessageDialog(
+                            frame,
+                            t.generateReceipt()
+                    );
+                }
+
+            }, () -> customerMenu(c)));
+
+
 
         addCentered(panel, new JButton("Withdraw"), e ->
-                inputBox("Withdraw Amount", amt -> {
+        inputBox("Withdraw Amount", amt -> {
 
-                    if (amt > 10000) {
-                        JOptionPane.showMessageDialog(frame,"Needs staff approval");
-                        return;
-                    }
+            if (amt > 10000) {
 
-                    if (c.withdraw(amt)) {
-                        Transaction t = new Transaction(amt,c.checkBalance(),"WITHDRAW",c.getCustomerId());
-                        t.processTransaction();
-                        JOptionPane.showMessageDialog(frame,t.generateReceipt());
-                    } else {
-                        JOptionPane.showMessageDialog(frame,"Insufficient Balance");
-                    }
+                JOptionPane.showMessageDialog(
+                        frame,
+                        "Withdrawal above ₹10,000 detected."
+                        + "\nRequest sent to bank staff for approval."
+                        + "\nPlease wait..."
+                );
 
-                }, () -> customerMenu(c)));
+
+
+                BankStaff staff = staffs.get(0);
+
+                String verification =
+                        staff.verifyCustomer(c);
+
+                JOptionPane.showMessageDialog(
+                        frame,
+                        verification
+                );
+
+
+                Transaction t = new Transaction(
+                        amt,
+                        c.checkBalance(),
+                        "WITHDRAW",
+                        c.getCustomerId()
+                );
+
+
+
+                String approval =
+                        staff.approveTransaction(t);
+
+                JOptionPane.showMessageDialog(
+                        frame,
+                        approval
+                );
+            }
+
+
+
+           
+            if (c.withdraw(amt)) {
+
+                Transaction t = new Transaction(
+                        amt,
+                        c.checkBalance(),
+                        "WITHDRAW",
+                        c.getCustomerId()
+                );
+
+                t.processTransaction();
+
+                JOptionPane.showMessageDialog(
+                        frame,
+                        t.generateReceipt()
+                );
+
+            } else {
+
+                JOptionPane.showMessageDialog(
+                        frame,
+                        "Insufficient Balance"
+                );
+            }
+
+        }, () -> customerMenu(c)));
 
         addCentered(panel, new JButton("History"), e -> {
+
             StringBuilder sb = new StringBuilder();
-            for (Transaction t: Transaction.getHistoryFor(c.getCustomerId()))
-                sb.append(t.getTransactionDetails()).append("\n");
-            JOptionPane.showMessageDialog(frame,sb.toString());
+
+            for (Transaction t :
+                    Transaction.getHistoryFor(c.getCustomerId())) {
+
+                sb.append(t.getTransactionDetails())
+                  .append("\n");
+            }
+
+            JOptionPane.showMessageDialog(
+                    frame,
+                    sb.toString()
+            );
         });
 
-        addCentered(panel, new JButton("Logout"), e -> roleSelection());
+
+
+        addCentered(panel,
+                new JButton("Logout"),
+                e -> roleSelection());
+
+
 
         setPanel(panel);
     }
@@ -300,7 +387,7 @@ public class B {
     }
 
     static void addCentered(JPanel panel, JButton btn, java.awt.event.ActionListener action) {
-        btn.setFocusPainted(false); // remove weird line
+        btn.setFocusPainted(false); 
         addCentered(panel, btn);
         btn.addActionListener(action);
     }
