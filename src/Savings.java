@@ -1,5 +1,3 @@
-package bank;
-
 public class Savings extends Account {
 
     public Savings(String accountNumber,

@@ -1,5 +1,3 @@
-package bank;
-
 public class Current extends Account {
 
     public Current(String accountNumber,

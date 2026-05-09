@@ -1,5 +1,3 @@
-package bank;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.*;
@@ -13,9 +11,9 @@ public class B {
 
     public static void main(String[] args) {
 
-        Customer c1 = new Customer("C101", "1234", "Amala","TVM","111","a@mail","1");
-        Customer c2 = new Customer("C102", "1234", "Rahul","TVM","222","b@mail","1");
-        Customer c3 = new Customer("C103", "1234", "Anu","TVM","333","c@mail","1");
+        Customer c1 = new Customer("C101", "1234", "Eva","Trivandrum","111","a@mail","1");
+        Customer c2 = new Customer("C102", "1234", "Rahul","Kollam","222","b@mail","1");
+        Customer c3 = new Customer("C103", "1234", "Anu","Alappuzha","333","c@mail","1");
 
         c1.setAccount(new Savings("A1","Savings",5000));
         c2.setAccount(new Current("A2","Current",8000));
@@ -117,7 +115,7 @@ public class B {
         addCentered(panel, new JButton("Deposit"), e ->
                 inputBox("Deposit Amount", amt -> {
                     if (c.deposit(amt)) {
-                        Transaction t = new Transaction(amt,"DEPOSIT",c.getCustomerId());
+                    	Transaction t = new Transaction(amt,c.checkBalance(),"DEPOSIT",c.getCustomerId());
                         t.processTransaction();
                         JOptionPane.showMessageDialog(frame,t.generateReceipt());
                     }
@@ -132,7 +130,7 @@ public class B {
                     }
 
                     if (c.withdraw(amt)) {
-                        Transaction t = new Transaction(amt,"WITHDRAW",c.getCustomerId());
+                        Transaction t = new Transaction(amt,c.checkBalance(),"WITHDRAW",c.getCustomerId());
                         t.processTransaction();
                         JOptionPane.showMessageDialog(frame,t.generateReceipt());
                     } else {
@@ -178,12 +176,12 @@ public class B {
                 if (c.getCustomerId().equals(id)) {
 
                 	String details =
-                	        "ID: " + c.getCustomerId() +
-                	        "\nName: " + c.getName() +
-                	        "\nAddress: " + c.getAddress() +
-                	        "\nPhone: " + c.getPhoneNumber() +
-                	        "\nEmail: " + c.getEmailId() +
-                	        "\nAccount Type: " + c.getAccount().getAccountType();
+                	        "ID				: " + c.getCustomerId() +
+                	        "\nName			: " + c.getName() +
+                	        "\nAddress		: " + c.getAddress() +
+                	        "\nPhone		: " + c.getPhoneNumber() +
+                	        "\nEmail		: " + c.getEmailId() +
+                	        "\nAccount Type : " + c.getAccount().getAccountType();
                     JOptionPane.showMessageDialog(frame, details);
                     return;
                 }
