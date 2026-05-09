@@ -28,11 +28,11 @@ Open the project folder in:
 ### Step 3: Compile the Java Files
 Open terminal inside the project folder and run:
 ```bash
-javac *.java
+javac src/*.java
 ```
 ### Step 4: Run the Program
 ```bash
-java Main
+java src.B
 ```
 
 ## Sample Input / Output
