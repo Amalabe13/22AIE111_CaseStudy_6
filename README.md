@@ -17,23 +17,37 @@
 
 
 ### Step 1: Clone the Repository
+
 ```bash
 git clone https://github.com/Amalabe13/22AIE111_CaseStudy_6.git
 ```
-### Step 2: Open the Project
-Open the project folder in:
-- VS Code
-- IntelliJ IDEA
-- Eclipse
-### Step 3: Compile the Java Files
-Open terminal inside the project folder and run:
+
+### Step 2: Open the Project Folder
+
+```bash
+cd 22AIE111_CaseStudy_6
+```
+
+### Step 3: Open in VS Code
+
+```bash
+code .
+```
+
+### Step 4: Compile the Java Files
+
+Open terminal in VS Code and run:
+
 ```bash
 javac src/*.java
 ```
-### Step 4: Run the Program
+
+### Step 5: Run the Project
+
 ```bash
-java src.B
+java -cp src B
 ```
+
 
 ## Sample Input / Output
 ## Tools / Technologies Used
