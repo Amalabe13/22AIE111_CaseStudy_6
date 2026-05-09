@@ -6,7 +6,7 @@
 |-------------|------|
 | MEGHA S | Transaction Class, Receipt Generation, Transaction History |
 | AMALA B | BankStaff Class, Customer Verification and Updation, Login System |
-| AISWARYA S |  Account Class, Savings & Current Classes, Balance Management|
+| AISWARYA S |  Account Class, Savings & Current Classes, Balance Management |
 | THEERTHA A | Customer Class, Customer Menu Handling, Customer Details Display |
 
 ## Problem Description
