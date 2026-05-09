@@ -1,10 +1,13 @@
 # Bank Management System
 
-## Team Members (with Roles)
-* MEGHA:
-* AMALAS:
-* AISWARYA:
-* THEERTHA:
+## Team Members
+
+| Team Member | Role |
+|-------------|------|
+| MEGHA S | __________________________ |
+| AMALA B | __________________________ |
+| AISWARYA S | __________________________ |
+| THEERTHA A | __________________________ |
 
 ## Problem Description
 * The Bank Management System is designed to manage basic banking operations in a simple and organized way.
