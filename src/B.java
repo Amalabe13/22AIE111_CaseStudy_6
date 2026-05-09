@@ -17,9 +17,9 @@ public class B {
         Customer c2 = new Customer("C102", "1234", "Rahul","TVM","222","b@mail","1");
         Customer c3 = new Customer("C103", "1234", "Anu","TVM","333","c@mail","1");
 
-        c1.setAccount(new Account("A1","Savings",5000));
-        c2.setAccount(new Account("A2","Savings",8000));
-        c3.setAccount(new Account("A3","Savings",10000));
+        c1.setAccount(new Savings("A1","Savings",5000));
+        c2.setAccount(new Current("A2","Current",8000));
+        c3.setAccount(new Savings("A3","Savings",10000));
 
         customers.add(c1); customers.add(c2); customers.add(c3);
 
@@ -110,7 +110,9 @@ public class B {
         JPanel panel = centerPanel();
 
         addCentered(panel, new JButton("Balance"), e ->
-                JOptionPane.showMessageDialog(frame,"Balance: "+c.checkBalance()));
+        JOptionPane.showMessageDialog(frame,
+        "Account Type: " + c.getAccount().getAccountType()
+        + "\nBalance: " + c.checkBalance()));
 
         addCentered(panel, new JButton("Deposit"), e ->
                 inputBox("Deposit Amount", amt -> {
@@ -175,13 +177,13 @@ public class B {
             for (Customer c: customers) {
                 if (c.getCustomerId().equals(id)) {
 
-                    String details =
-                            "ID: " + c.getCustomerId() +
-                            "\nName: " + c.getName() +
-                            "\nAddress: " + c.getAddress() +
-                            "\nPhone: " + c.getPhoneNumber() +
-                            "\nEmail: " + c.getEmailId();
-
+                	String details =
+                	        "ID: " + c.getCustomerId() +
+                	        "\nName: " + c.getName() +
+                	        "\nAddress: " + c.getAddress() +
+                	        "\nPhone: " + c.getPhoneNumber() +
+                	        "\nEmail: " + c.getEmailId() +
+                	        "\nAccount Type: " + c.getAccount().getAccountType();
                     JOptionPane.showMessageDialog(frame, details);
                     return;
                 }
@@ -300,7 +302,7 @@ public class B {
     }
 
     static void addCentered(JPanel panel, JButton btn, java.awt.event.ActionListener action) {
-        btn.setFocusPainted(false); 
+        btn.setFocusPainted(false); // remove weird line
         addCentered(panel, btn);
         btn.addActionListener(action);
     }
