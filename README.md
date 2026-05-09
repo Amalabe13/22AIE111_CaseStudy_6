@@ -2,12 +2,14 @@
 
 ## Team Members
 
+## Team Members
+
 | Team Member | Role |
 |-------------|------|
-| MEGHA S | __________________________ |
-| AMALA B | __________________________ |
-| AISWARYA S | __________________________ |
-| THEERTHA A | __________________________ |
+| MEGHA S | Transaction Class, Receipt Generation, Transaction History |
+| AMALA B | BankStaff Class, Customer Verification and Updation, Login System |
+| AISWARYA S |  Account Class, Savings & Current Classes, Balance Management|
+| THEERTHA A | Customer Class, Customer Menu Handling, Customer Details Display |
 
 ## Problem Description
 * The Bank Management System is designed to manage basic banking operations in a simple and organized way.
