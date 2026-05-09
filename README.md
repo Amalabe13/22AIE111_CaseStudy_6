@@ -2,8 +2,6 @@
 
 ## Team Members
 
-## Team Members
-
 | Team Member | Role |
 |-------------|------|
 | MEGHA S | Transaction Class, Receipt Generation, Transaction History |
