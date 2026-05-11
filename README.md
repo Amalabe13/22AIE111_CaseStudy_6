@@ -16,25 +16,25 @@
 ## How to Run the Code
 
 
-### Step 1: Clone the Repository
+#### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/Amalabe13/22AIE111_CaseStudy_6.git
 ```
 
-### Step 2: Open the Project Folder
+#### Step 2: Open the Project Folder
 
 ```bash
 cd 22AIE111_CaseStudy_6
 ```
 
-### Step 3: Open in VS Code
+#### Step 3: Open in VS Code
 
 ```bash
 code .
 ```
 
-### Step 4: Compile the Java Files
+#### Step 4: Compile the Java Files
 
 Open terminal in VS Code and run:
 
@@ -42,7 +42,7 @@ Open terminal in VS Code and run:
 javac src/*.java
 ```
 
-### Step 5: Run the Project
+#### Step 5: Run the Project
 
 ```bash
 java -cp src B
