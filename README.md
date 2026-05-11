@@ -50,6 +50,9 @@ java -cp src B
 
 
 ## Sample Input / Output
+
+https://github.com/user-attachments/assets/faa0028e-48a6-4aff-9c7f-89ef85fc2039
+
 ## Tools / Technologies Used
 * Java programming language
 * Object-Oriented Programming concepts
