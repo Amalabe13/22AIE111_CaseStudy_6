@@ -51,6 +51,10 @@ java -cp src B
 
 ## Sample Input / Output
 
+##### Sample Input
+1. Customer id: C101; Password: 1234
+2. Staff id: S1; Password: Admin1
+
 https://github.com/user-attachments/assets/faa0028e-48a6-4aff-9c7f-89ef85fc2039
 
 ## Tools / Technologies Used
